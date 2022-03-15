@@ -1,0 +1,40 @@
+{
+  "name": "mongodb-express-starter",
+  "version": "1.0.0",
+  "description": "A starter kit with all files to start with an express server and mongodb.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AreAtomic/mongodb-express-starter.git"
+  },
+  "keywords": [
+    "Mongo",
+    "DB",
+    "Express",
+    "Node",
+    "Starter",
+    "kit"
+  ],
+  "author": "Areatomic - aureliensebe@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AreAtomic/mongodb-express-starter/issues"
+  },
+  "homepage": "https://github.com/AreAtomic/mongodb-express-starter#readme",
+  "dependencies": {
+    "config": "^3.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.15",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}

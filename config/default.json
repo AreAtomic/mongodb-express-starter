@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://[user]:[password]@[database]",
+    "jwtSecret": "yourstrongsecrettokenmustbechanged"
+}
