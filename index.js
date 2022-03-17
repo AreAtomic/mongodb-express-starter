@@ -15,4 +15,4 @@ server.listen(config.port)
 
 connectDB()
 
-server.use('/api', require('./routes/root'))
+server.use('/api/v1', require('./api'))
