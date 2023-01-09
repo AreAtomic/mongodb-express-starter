@@ -1,18 +1,29 @@
 const express = require('express')
+const fileUpload = require('express-fileupload')
 
-// import for wor whitelist allow only
 const cors = require('cors')
 
-// import for config
 const server = express()
 const config = require('./config')
-const connectDB = require('./config/db')
+const connectDB = require('./services/database')
 
-// Config
+server.use(
+    '*',
+    cors({
+        origin: '*',
+        optionsSuccessStatus: 204,
+    })
+)
 server.use(express.json({ extended: false }))
+server.use(fileUpload())
 server.disable('x-powered-by')
-server.listen(config.port)
+server.listen(config.port, () => {
+    console.log(`Server started on port ${config.port}`)
+})
 
 connectDB()
 
 server.use('/api/v1', require('./api'))
+
+const { errorMiddlewares } = require('./api/middlewares')
+server.use(errorMiddlewares)
