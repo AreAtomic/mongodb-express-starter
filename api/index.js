@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
     )
 })
 
-// router.use('/example', exampleRoutes)
+const {authRoutes} = require('./routes') 
+router.use('/auth', authRoutes)
 
 module.exports = router
